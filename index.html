@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<h1 class='display-4' >Personal Library</h1>
+	<div id='main'>
+		<table id='table' class='table table-striped table-dark'></table>
+	</div>
+	<button id='addButton'>Add book</button>
+
+
+	<div class="form-popup" id="myForm">
+		<form onsubmit="addBookToLibrary(); return false;" class="form-container" name='form'>
+
+		<h2>Add New Book</h2>			
+
+	    <input id='title' type="text" autocomplete="off" placeholder="Title" value="" name="title" required>
+
+	    <input id='author' type="text" autocomplete="off" placeholder="Author" name="psw" required>
+
+	    <input id='pages' type="number" autocomplete="off" placeholder="Pages" name="pages" required>
+
+	    <label><br><b>Read: </b></label>
+	    
+		<input value = 'yes' type="radio" name="read" checked>Yes
+		<input value = 'no' type="radio" name="read">No<br>
+
+	    <input type="submit" value="Submit">
+	    <input type='button' id='closeButton' value='Close'>
+		</form>
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+	<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
