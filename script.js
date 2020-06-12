@@ -13,7 +13,7 @@ form.style.display = 'none';
 
 (function() {
 	// Firebase configuration
-	var firebaseConfig = {
+	let firebaseConfig = {
 	apiKey: "AIzaSyB89YiFovzek4SBJ_MCN6YDsEIde6MzEo8",
 	authDomain: "library-e5b33.firebaseapp.com",
 	databaseURL: "https://library-e5b33.firebaseio.com",
@@ -100,13 +100,13 @@ function addBookToLibrary() {
 function render(index){
 	addButton.innerHTML = 'Add Book';
 
-    var tr = table.insertRow();
-	var td1 = tr.insertCell();
-	var td2 = tr.insertCell();
-	var td3 = tr.insertCell();
-	var td4 = tr.insertCell();
-	var td5 = tr.insertCell();
-	var td6 = tr.insertCell();
+	let tr = table.insertRow();
+	let td1 = tr.insertCell();
+	let td2 = tr.insertCell();
+	let td3 = tr.insertCell();
+	let td4 = tr.insertCell();
+	let td5 = tr.insertCell();
+	let td6 = tr.insertCell();
 
 	let arrayIndex = myLibrary.findIndex(x => x.index == index);
 
@@ -115,7 +115,7 @@ function render(index){
 	td3.appendChild(document.createTextNode(myLibrary[arrayIndex].pages));
 	td4.appendChild(document.createTextNode(myLibrary[arrayIndex].read));
 
-    var btnRead = document.createElement('input');
+	let btnRead = document.createElement('input');
 	btnRead.type = "button";
 	btnRead.className = "btn";
 	btnRead.value = 'Read Status';
@@ -126,7 +126,7 @@ function render(index){
 
 	td5.appendChild(btnRead);
 
-    var btn = document.createElement('input');
+	let btn = document.createElement('input');
 	btn.type = "button";
 	btn.className = "btn";
 	btn.value = 'Delete Book';
@@ -195,9 +195,9 @@ closeButton.addEventListener("click", e => {
 let headerElements = ["Title", "Author", "Pages", "Read", "", ""];
 
 
-var row = table.insertRow(-1);
-for (var i = 0; i < headerElements.length; i++) {
-    var headerCell = document.createElement("TH");
+let row = table.insertRow(-1);
+for (let i = 0; i < headerElements.length; i++) {
+    let headerCell = document.createElement("TH");
     headerCell.innerHTML = headerElements[i];
     row.appendChild(headerCell);
 }
