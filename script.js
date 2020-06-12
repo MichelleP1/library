@@ -3,11 +3,12 @@ let table = document.querySelector('#table');
 let addButton = document.querySelector('#addButton');
 let closeButton = document.querySelector('#closeButton');
 let form = document.getElementById("myForm");
-form.style.display = 'none';
 
 let myLibrary = [];
 let indexValue = 0;
 let loaded = false;
+
+form.style.display = 'none';
 
 
 (function() {
@@ -110,9 +111,9 @@ function render(index){
 	let arrayIndex = myLibrary.findIndex(x => x.index == index);
 
 	td1.appendChild(document.createTextNode(myLibrary[arrayIndex].title));
-    td2.appendChild(document.createTextNode(myLibrary[arrayIndex].author));
-    td3.appendChild(document.createTextNode(myLibrary[arrayIndex].pages));
-    td4.appendChild(document.createTextNode(myLibrary[arrayIndex].read));
+	td2.appendChild(document.createTextNode(myLibrary[arrayIndex].author));
+	td3.appendChild(document.createTextNode(myLibrary[arrayIndex].pages));
+	td4.appendChild(document.createTextNode(myLibrary[arrayIndex].read));
 
     var btnRead = document.createElement('input');
 	btnRead.type = "button";
